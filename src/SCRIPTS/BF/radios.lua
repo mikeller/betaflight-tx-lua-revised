@@ -1,15 +1,35 @@
-
-supportedRadios = 
+lcdResolution =
 {
-    ["x9d"] =     
+    low = 0,
+    high = 1
+}
+
+
+local supportedRadios =
+{
+    ["x9d"] =
     {
         templateHome    = SCRIPT_HOME.."/X9/",
-        preLoad         = SCRIPT_HOME.."/X9/x9pre.lua"
+        preLoad         = SCRIPT_HOME.."/X9/x9pre.lua",
+        resolution      = lcdResolution.low
     },
     ["x9d+"] =
     {
         templateHome    = SCRIPT_HOME.."/X9/",
-        preLoad         = SCRIPT_HOME.."/X9/x9pre.lua"
+        preLoad         = SCRIPT_HOME.."/X9/x9pre.lua",
+        resolution      = lcdResolution.low
+    },
+    ["x12s"] =
+    {
+        templateHome=SCRIPT_HOME.."/X12S/",
+        preLoad=SCRIPT_HOME.."/X12S/x12spre.lua",
+        resolution      = lcdResolution.high
+    },
+    ["x12s-simu"] =
+    {
+        templateHome=SCRIPT_HOME.."/X12S/",
+        preLoad=SCRIPT_HOME.."/X12S/x12spre.lua",
+        resolution      = lcdResolution.high
     }
 }
 
